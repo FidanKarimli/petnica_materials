@@ -1,0 +1,3 @@
+[submodule "PSI-ML_2025-protein-folds"]
+	path = PSI-ML_2025-protein-folds
+	url = https://github.com/VGligorijevic/PSI-ML_2025-protein-folds.git
