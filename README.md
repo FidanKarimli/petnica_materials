@@ -36,10 +36,30 @@ petnica_2026/
 │   ├── PINNs.pdf
 │   └── VGligorijevic-PSI-2025_ML-2025 (1).pdf   slides accompanying the protein-folds project
 │
-└── PSI-ML_2025-protein-folds/           Protein fold classification with graph neural
-                                         networks (regular tracked folder)
+├── PSI-ML_2025-protein-folds/           Protein fold classification with graph neural
+│                                        networks (regular tracked folder)
+│
+└── sciml26_gjepa/                       Final project (with teammate Pau Martinez): see below
 ```
 
+
+## Final project: Graph-JEPA for protein stability
+
+`sciml26_gjepa/` is our final project for the Petnica Summer Institute Scientific
+Machine Learning track (August 2026), built together with my teammate **Pau
+Martinez**.
+
+We train a graph neural network in two stages: first it's **pretrained with no
+labels at all**, using a Joint-Embedding Predictive Architecture (JEPA) on ~6,800
+unlabeled protein structures (SCOP, via ProteinShake) to learn general-purpose
+structural representations. We then **fine-tune** that pretrained model on the
+MegaScale dataset (862 proteins, 271k stability measurements) to predict **ddG** —
+how much a single amino-acid mutation destabilizes a protein — and compare against
+ThermoMPNN's published benchmark (Spearman 0.642 from scratch / 0.725 pretrained on
+the full PDB) to see how far a small, self-pretrained model can get on a
+protein-disjoint split.
+
+Repo: [paumartinez160/sciml26_gjepa](https://github.com/paumartinez160/sciml26_gjepa)
 
 ## Where things came from
 
@@ -51,6 +71,7 @@ and lecture sessions, reorganized it into one place, and added my own notes on t
 | `02_08_intro_task_temp_prediction/`, `03_08_pinns/`, `06_08_bayesian_dl_project/` | [petnica-ml-sci/ml-sci-materials](https://github.com/petnica-ml-sci/ml-sci-materials) | Extracted from the official 2026 course repo |
 | `PSI-ML_2025-protein-folds/` | [VGligorijevic/PSI-ML_2025-protein-folds](https://github.com/VGligorijevic/PSI-ML_2025-protein-folds) | Pulled from the 2025 project repo |
 | `gnn-pde-tutorial/`, `notes/` | Petnica lecture materials | Collected from course sessions |
+| `sciml26_gjepa/` | [paumartinez160/sciml26_gjepa](https://github.com/paumartinez160/sciml26_gjepa) | Our own final project — built by me and Pau Martinez, not pulled from a course repo |
 
 ## A few things to know
 
