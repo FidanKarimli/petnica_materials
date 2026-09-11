@@ -36,15 +36,20 @@ petnica_2026/
 │   ├── braonic_slides_35h.pdf
 │   └── PINNs.pdf
 │
-└── PSI-ML_2025-protein-folds/           Standalone project (own git repo): protein fold
-                                         classification with graph neural networks
+└── PSI-ML_2025-protein-folds/           Git submodule: protein fold classification
+                                         with graph neural networks
 ```
 
 ## Notes
 
-- `PSI-ML_2025-protein-folds/` is its own git repository (cloned from
-  `VGligorijevic/PSI-ML_2025-protein-folds`) and is kept untouched at the top level
-  rather than restructured internally.
+- `PSI-ML_2025-protein-folds/` is a **git submodule** pointing at
+  `https://github.com/VGligorijevic/PSI-ML_2025-protein-folds.git` (registered in
+  `.gitmodules`), kept untouched and unmodified at the top level rather than
+  restructured internally. After cloning this repo, run:
+  ```bash
+  git submodule update --init --recursive
+  ```
+  to fetch its contents.
 - `02_08_intro_task_temp_prediction/`, `03_08_pinns/`, and `06_08_bayesian_dl_project/`
   are 2026 course material that originally lived inside a separate `ml-sci-materials/`
   clone (`github.com/petnica-ml-sci/ml-sci-materials`). That clone — including its
