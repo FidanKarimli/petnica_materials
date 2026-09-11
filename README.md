@@ -1,9 +1,8 @@
-# petnica_2026
 
-Personal workspace for Petnica Summer Institute ML-for-Science materials: course
-content, lecture notes, and standalone project code.
+my workspace for everything from the Petnica Summer Institute ML for Science track:
+course notebooks, lecture slides, project code, and whatever else I pick up along the way.
 
-## Structure
+## What's in here
 
 ```
 petnica_2026/
@@ -34,24 +33,31 @@ petnica_2026/
 ├── notes/                               Reference slides and lecture notes (PDFs)
 │   ├── bayesian_ml.pdf
 │   ├── braonic_slides_35h.pdf
-│   └── PINNs.pdf
+│   ├── PINNs.pdf
+│   └── VGligorijevic-PSI-2025_ML-2025 (1).pdf   slides accompanying the protein-folds project
 │
-└── PSI-ML_2025-protein-folds/           Git submodule: protein fold classification
-                                         with graph neural networks
+└── PSI-ML_2025-protein-folds/           Protein fold classification with graph neural
+                                         networks (regular tracked folder)
 ```
 
-## Notes
 
-- `PSI-ML_2025-protein-folds/` is a **git submodule** pointing at
-  `https://github.com/VGligorijevic/PSI-ML_2025-protein-folds.git` (registered in
-  `.gitmodules`), kept untouched and unmodified at the top level rather than
-  restructured internally. After cloning this repo, run:
-  ```bash
-  git submodule update --init --recursive
-  ```
-  to fetch its contents.
-- `02_08_intro_task_temp_prediction/`, `03_08_pinns/`, and `06_08_bayesian_dl_project/`
-  are 2026 course material that originally lived inside a separate `ml-sci-materials/`
-  clone (`github.com/petnica-ml-sci/ml-sci-materials`). That clone — including its
-  `sciml_2025/` content — is currently **not present on disk** and still needs to be
-  restored (e.g. via `git clone`) and reconciled with these three folders.
+## Where things came from
+
+Most of this is not my original material. I pulled it together from different course repos
+and lecture sessions, reorganized it into one place, and added my own notes on top.
+
+| Folder | Source | What I did |
+|---|---|---|
+| `02_08_intro_task_temp_prediction/`, `03_08_pinns/`, `06_08_bayesian_dl_project/` | [petnica-ml-sci/ml-sci-materials](https://github.com/petnica-ml-sci/ml-sci-materials) | Extracted from the official 2026 course repo |
+| `PSI-ML_2025-protein-folds/` | [VGligorijevic/PSI-ML_2025-protein-folds](https://github.com/VGligorijevic/PSI-ML_2025-protein-folds) | Pulled from the 2025 project repo |
+| `gnn-pde-tutorial/`, `notes/` | Petnica lecture materials | Collected from course sessions |
+
+## A few things to know
+
+`PSI-ML_2025-protein-folds/` was originally its own git clone. I removed its `.git`
+and re added everything as normal tracked files, so it lives cleanly inside this repo now.
+
+The three 2026 folders (`02_08_intro_task_temp_prediction/`, `03_08_pinns/`,
+`06_08_bayesian_dl_project/`) came from the `ml-sci-materials` repo. That original
+clone, including the `sciml_2025/` content, is not on disk right now. I still need
+to restore it and reconcile it with what's already here.
