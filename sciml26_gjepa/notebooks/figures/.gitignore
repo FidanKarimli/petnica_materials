@@ -1,0 +1,2 @@
+# cached arXiv LaTeX sources, ~17 MB. Safe to delete; scripts/fetch_figures.py re-downloads.
+_src/

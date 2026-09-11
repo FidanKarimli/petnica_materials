@@ -1,0 +1,23 @@
+# Everything except torch.
+#
+# torch is deliberately absent: Google Colab already ships a working CUDA build, and
+# installing another one on top is the standard way to break a Colab runtime. Locally you
+# install it once, see setup.sh.
+
+torch_geometric>=2.8
+loguru>=0.7
+
+# data, both download themselves on first use
+datasets>=3.0          # HuggingFace, for the MegaScale stability measurements
+proteinshake>=0.3      # SCOP structures, the pretraining corpus
+
+# numerics and plotting
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+scikit-learn>=1.3
+matplotlib>=3.7
+
+# notebooks
+ipykernel>=6
+jupytext>=1.16

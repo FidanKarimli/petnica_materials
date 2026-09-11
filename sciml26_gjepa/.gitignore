@@ -1,0 +1,42 @@
+# ---------------------------------------------------------------- environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------- downloaded data
+# All of this is fetched on first run. Nothing here belongs in the repo.
+data/
+notebooks/data/
+notebooks/figures/_src/          # cached arXiv LaTeX sources, ~17 MB
+
+# ---------------------------------------------------------------- run artefacts
+*.log
+results_*.csv
+*_history.csv
+outputs/
+
+# ---------------------------------------------------------------- NOT FOR STUDENTS
+# Delete these three lines when you are ready to publish the solutions.
+notebooks/sciml_graph_jepa_sol.ipynb
+notebooks/sciml_graph_jepa_sol.py
+scripts/make_solutions.py
+
+# internal planning and research notes, not part of the student material
+PROJECT_PLAN.md
+PROJECT_PLAN_MOLECULE_FALLBACK.md
+FINDINGS.md
+
+# our own tooling and experiment runners. Students drive everything from the notebook.
+scripts/
+
+# the molecular-graph fallback project. The protein notebook never imports these.
+gjepa/data.py
+gjepa/probes.py
+gjepa/baselines.py
+gjepa/experiment.py
+gjepa/train.py
+tests/test_correctness.py
+
+.DS_Store
